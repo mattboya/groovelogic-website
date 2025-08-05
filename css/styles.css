@@ -1,7 +1,7 @@
 /*
   File: css/styles.css
   Generated: 2025-08-05
-  Description: Main stylesheet for the Groove Logic website.
+  Description: Main stylesheet for the Groove Logic website. Updated with new vibrant color palette.
 */
 
 /* --- Google Font Import --- */
@@ -9,12 +9,13 @@
 
 /* --- CSS Variables (Color Palette) --- */
 :root {
-    --primary-color: #6a11cb;
-    --secondary-color: #2575fc;
-    --background-color: #121212;
-    --surface-color: #1e1e1e;
-    --text-color: #e0e0e0;
-    --text-color-muted: #a0a0a0;
+    --primary-color: #6AE472;      /* CHANGED to Bright Green */
+    --secondary-color: #28CC85;    /* CHANGED to Teal Green */
+    --background-color: #121212;   /* KEPT original dark theme */
+    --surface-color: #1e1e1e;      /* KEPT original dark theme */
+    --text-color: #e0e0e0;         /* KEPT original text color */
+    --text-color-muted: #a0a0a0;  /* KEPT original text color */
+    --tag-background: #1c3d2f;     /* CHANGED to a dark teal/green */
 }
 
 /* --- Global Reset & Base Styles --- */
@@ -113,7 +114,7 @@ nav ul li a:hover {
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    background: #B04740; /* Using Red from palette for high contrast */
     color: #fff;
     padding: 12px 24px;
     border-radius: 5px;
@@ -124,6 +125,128 @@ nav ul li a:hover {
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(176, 71, 64, 0.3);
 }
-/* Total lines: 140 */
+
+/* --- About Section Styles --- */
+#about {
+    padding: 4rem 0;
+    background-color: var(--surface-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.about-text p {
+    margin-bottom: 1rem;
+    color: var(--text-color-muted);
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.placeholder-image {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Apps Section Styles --- */
+#apps {
+    padding: 4rem 0;
+}
+
+.apps-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.app-card {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    flex-basis: 320px;
+    flex-grow: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(40, 204, 133, 0.2);
+}
+
+.app-card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.placeholder-app-image1 { background: linear-gradient(145deg, #6AE472, #28CC85); }
+.placeholder-app-image2 { background: linear-gradient(145deg, #28CC85, #CBF6CE); }
+.placeholder-app-image3 { background: linear-gradient(145deg, #6AE472, #47b075); }
+
+
+.app-card h3 {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem 0.5rem 1.5rem;
+}
+
+.app-card p {
+    font-size: 0.95rem;
+    color: var(--text-color-muted);
+    padding: 0 1.5rem 1rem 1.5rem;
+    flex-grow: 1;
+}
+
+.app-tags {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.tag {
+    display: inline-block;
+    background-color: var(--tag-background);
+    color: var(--text-color);
+    padding: 0.3rem 0.7rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+}
+/* Total lines: 280 */
