@@ -1,7 +1,7 @@
 /*
   File: css/styles.css
   Generated: 2025-08-05
-  Description: Main stylesheet for the Groove Logic website. Updated with new vibrant color palette.
+  Description: Main stylesheet for the Groove Logic website. Updated with real app data styles.
 */
 
 /* --- Google Font Import --- */
@@ -9,13 +9,13 @@
 
 /* --- CSS Variables (Color Palette) --- */
 :root {
-    --primary-color: #6AE472;      /* CHANGED to Bright Green */
-    --secondary-color: #28CC85;    /* CHANGED to Teal Green */
-    --background-color: #121212;   /* KEPT original dark theme */
-    --surface-color: #1e1e1e;      /* KEPT original dark theme */
-    --text-color: #e0e0e0;         /* KEPT original text color */
-    --text-color-muted: #a0a0a0;  /* KEPT original text color */
-    --tag-background: #1c3d2f;     /* CHANGED to a dark teal/green */
+    --primary-color: #6AE472;      /* Bright Green */
+    --secondary-color: #28CC85;    /* Teal Green */
+    --background-color: #121212;   /* Original dark theme */
+    --surface-color: #1e1e1e;      /* Original dark theme */
+    --text-color: #e0e0e0;         /* Original text color */
+    --text-color-muted: #a0a0a0;  /* Original text color */
+    --tag-background: #1c3d2f;     /* Dark teal/green */
 }
 
 /* --- Global Reset & Base Styles --- */
@@ -194,6 +194,12 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
+.app-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+}
+
 .app-card {
     background-color: var(--surface-color);
     border-radius: 10px;
@@ -220,7 +226,6 @@ nav ul li a:hover {
 
 .placeholder-app-image1 { background: linear-gradient(145deg, #6AE472, #28CC85); }
 .placeholder-app-image2 { background: linear-gradient(145deg, #28CC85, #CBF6CE); }
-.placeholder-app-image3 { background: linear-gradient(145deg, #6AE472, #47b075); }
 
 
 .app-card h3 {
@@ -249,4 +254,87 @@ nav ul li a:hover {
     margin-right: 0.5rem;
     margin-top: 0.5rem;
 }
-/* Total lines: 280 */
+
+/* --- Contact Section Styles --- */
+#contact {
+    padding: 4rem 0;
+    background-color: var(--surface-color);
+}
+
+.contact-subtitle {
+    text-align: center;
+    margin-top: -2rem;
+    margin-bottom: 3rem;
+    color: var(--text-color-muted);
+}
+
+.contact-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--background-color);
+    border: 1px solid #333;
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary-color);
+    color: #111;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* --- Footer Styles --- */
+footer {
+    background-color: var(--background-color);
+    padding: 2rem 0;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+
+footer p {
+    color: var(--text-color-muted);
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: var(--text-color-muted);
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+/* Total lines: 360 */
