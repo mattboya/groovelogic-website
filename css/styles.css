@@ -1,7 +1,7 @@
 /*
   File: css/styles.css
   Generated: 2025-09-04
-  Description: Added styles for the new feedback form on the app detail page.
+  Description: Removed fixed heights from images to eliminate letterboxing.
 */
 
 /* --- Google Font Import --- */
@@ -223,13 +223,14 @@ nav ul li a:hover {
     box-shadow: 0 8px 25px rgba(255, 0, 193, 0.2);
 }
 
+/* MARK: Style Change */
 .app-card-image-custom {
-    height: 200px;
     width: 100%;
-    object-fit: cover;
+    /* Removed fixed height to allow the image to define its own height */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
+/* END: Style Change */
 
 .app-card h3 {
     font-size: 1.5rem;
@@ -321,7 +322,7 @@ nav ul li a:hover {
 
 /* --- Footer Styles --- */
 footer {
-    background-color: var(--background-al);
+    background-color: var(--background-color);
     padding: 2rem 0;
     text-align: center;
     border-top: 1px solid #2a2a2a;
@@ -362,7 +363,7 @@ footer p {
     height: 150px;
     border-radius: 25px;
     flex-shrink: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .app-title-group h1 {
@@ -426,14 +427,17 @@ footer p {
     flex-wrap: wrap;
 }
 
-.screenshot-placeholder {
-    height: 400px;
+/* MARK: Style Change */
+.screenshot-image {
     flex-basis: 30%;
     flex-grow: 1;
-    background-color: var(--surface-color);
+    /* Removed fixed height and object-fit to let the image define its own height */
     border-radius: 10px;
     border: 1px solid #2a2a2a;
+    min-width: 280px;
+    width: 100%; /* Ensures image scales within its flex container */
 }
+/* END: Style Change */
 
 /* --- Feedback Form Styles --- */
 #feedback {
@@ -444,4 +448,4 @@ footer p {
 .contact-form select option[disabled] {
     color: #757575;
 }
-/* Total lines: 518 */
+/* Total lines: 521 */
