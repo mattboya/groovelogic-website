@@ -448,4 +448,101 @@ footer p {
 .contact-form select option[disabled] {
     color: #757575;
 }
+
+/* --- Privacy Policy Page Styles --- */
+#privacy-policy {
+    padding: 4rem 0;
+}
+
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    color: var(--text-color-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--secondary-color);
+}
+
+.privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.privacy-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.privacy-content .last-updated {
+    color: var(--text-color-muted);
+    font-style: italic;
+    margin-bottom: 0.5rem;
+}
+
+.privacy-content h2 {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+.privacy-content h3 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.privacy-content p {
+    margin-bottom: 1rem;
+    color: var(--text-color-muted);
+}
+
+.privacy-content ul {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+.privacy-content li {
+    margin-bottom: 0.5rem;
+    color: var(--text-color-muted);
+}
+
+.privacy-content li strong {
+    color: var(--text-color);
+}
+
+.privacy-content a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.privacy-content a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Button styling for privacy policy page */
+.app-title-group .app-store-button {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .app-title-group .app-store-button {
+        display: block;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
 /* Total lines: 521 */
