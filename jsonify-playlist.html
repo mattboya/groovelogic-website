@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jsonify Playlist - Groove Logic</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="img/logo_text_grey_background.png" alt="Groove Logic Text Logo" class="header-logo-image">
+            </a>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="app-detail">
+            <div class="container">
+                <div class="app-detail-header">
+                    <img src="img/jsonify-playlist-logo.png" alt="Jsonify Playlist App Icon" class="app-detail-icon">
+                    <div class="app-title-group">
+                        <h1>Jsonify Playlist</h1>
+                        <p>Extract Spotify playlist metadata directly into a perfectly formatted JSON array.</p>
+                        <a href="https://jsonify-playlist.com" target="_blank" rel="noopener noreferrer" class="app-store-button">Open Web App</a>
+                    </div>
+                </div>
+
+                <div class="app-detail-body">
+                    <h2>Description</h2>
+                    <p>Jsonify Playlist gives you total control over your music data. Use your Spotify account to instantly access your personal library, or paste the URL of any public playlist. With one click, the tool extracts all the essential track metadata—including song titles, artists, and track length—and packages it into a perfectly formatted JSON array. You can then download the file directly or copy the code to your clipboard for use in your own local files, web apps, or data backups.</p>
+
+                    <h2>Key Features</h2>
+                    <ul class="features-list">
+                        <li><strong>One-Click Metadata Extraction:</strong> Instantly extract song titles, artists, and exact second-counts from any Spotify playlist.</li>
+                        <li><strong>Personal Library or Public Link:</strong> Use your Spotify account for direct access, or simply paste a public playlist URL.</li>
+                        <li><strong>Clean JSON Formatting:</strong> Generates a simplified, perfectly formatted JSON array of your tracklist, perfect for developers and DJs.</li>
+                        <li><strong>Easy Export:</strong> Download the file directly or copy-paste the data straight to your clipboard for immediate use.</li>
+                    </ul>
+
+                    <h2>Tech Stack</h2>
+                    <ul class="features-list">
+                        <li><strong>Frontend:</strong> Next.js 15 (App Router), TypeScript, and Tailwind CSS.</li>
+                        <li><strong>Backend & Auth:</strong> NextAuth.js for seamless Spotify OAuth, backed by Firebase for data storage and tracking.</li>
+                        <li><strong>Integrations:</strong> Spotify Web API (metadata), Google Drive API (direct cloud exports), and Polar.sh (subscription & payment processing).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <div class="container">
+                <h2 class="section-title">Feedback & Feature Requests</h2>
+                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
+                <form id="feedback-form" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <select name="type" required>
+                            <option value="" disabled selected>Select a message type...</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Assistance">Assistance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Groove Logic. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
