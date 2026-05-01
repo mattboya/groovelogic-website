@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WakeMate - Groove Logic</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="img/logo_text_grey_background.png" alt="Groove Logic Text Logo" class="header-logo-image">
+            </a>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="app-detail">
+            <div class="container">
+                <div class="app-detail-header">
+                    <img src="img/wakemate-logo.png" alt="WakeMate App Icon" class="app-detail-icon">
+                    <div class="app-title-group">
+                        <h1>WakeMate</h1>
+                        <p>Set alarms for the people you love.</p>
+                        <a href="#" class="app-store-button">View on App Store</a>
+                        <a href="wakemate-privacy.html" class="app-store-button">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="app-detail-body">
+                    <h2>Description</h2>
+                    <p>WakeMate turns your iPhone into a shared wake-up system for your whole family. Connect with friends and family members, then set alarms for each other — no more texting someone to wake up, just set the alarm directly and it rings on their phone. WakeMate syncs in real time so changes are always reflected instantly, and flexible per-friend permission controls let you decide exactly who can set alarms for you.</p>
+
+                    <h2>Key Features</h2>
+                    <ul class="features-list">
+                        <li><strong>Social Alarms:</strong> Set alarms for the people in your circle and they ring directly on their phones. No more "did you wake up?" texts.</li>
+                        <li><strong>Flexible Scheduling:</strong> Create one-time or recurring alarms with custom labels and personal messages for the recipient.</li>
+                        <li><strong>Friends System:</strong> Add people instantly via QR code scan or by entering a friend code. Control who can set alarms for you with per-friend permission settings.</li>
+                        <li><strong>Real-Time Sync:</strong> Alarm changes propagate instantly via Firebase, so everyone's schedule stays in sync without manual refreshes.</li>
+                        <li><strong>Custom Avatars:</strong> Choose from 12 colorful icons to personalize your profile — no photos required.</li>
+                        <li><strong>Family Plans:</strong> Duo and Family subscription plans make it affordable for the whole household.</li>
+                    </ul>
+
+                    <h2>Screenshots</h2>
+                    <div class="screenshot-gallery">
+                        <img src="img/wakemate/screenshot-1.png" alt="Screenshot of WakeMate alarm list" class="screenshot-image">
+                        <img src="img/wakemate/screenshot-2.png" alt="Screenshot of WakeMate friends system" class="screenshot-image">
+                        <img src="img/wakemate/screenshot-3.png" alt="Screenshot of WakeMate alarm creation" class="screenshot-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <div class="container">
+                <h2 class="section-title">Feedback & Feature Requests</h2>
+                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
+                <form id="feedback-form" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <select name="type" required>
+                            <option value="" disabled selected>Select a message type...</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Assistance">Assistance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Groove Logic. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/wakemate.js"></script>
+
+</body>
+</html>

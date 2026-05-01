@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ BPM Assistant - Groove Logic</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">
+                <img src="img/logo_text_grey_background.png" alt="Groove Logic Text Logo" class="header-logo-image">
+            </a>
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#apps">Apps</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="app-detail">
+            <div class="container">
+                <div class="app-detail-header">
+                    <img src="img/dj-bpm-assistant-logo.png" alt="DJ BPM Assistant App Icon" class="app-detail-icon">
+                    <div class="app-title-group">
+                        <h1>DJ BPM Assistant</h1>
+                        <p>Professional mixing tools in your pocket.</p>
+                        <a href="#" class="app-store-button">View on App Store</a>
+                        <a href="dj-bpm-assistant-privacy.html" class="app-store-button">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="app-detail-body">
+                    <h2>Description</h2>
+                    <p>Whether you're learning to mix or playing your hundredth gig, DJ BPM Assistant gives you the math and music theory you need, right on your iPhone. Calculate BPM multipliers in an instant, plan your next mix with a two-deck pitch-shift analyzer, explore transition tips across 15 genres, and navigate harmonic mixing with an interactive Camelot Wheel — all without needing an internet connection.</p>
+
+                    <h2>Key Features</h2>
+                    <ul class="features-list">
+                        <li><strong>BPM Calculator:</strong> Enter any BPM and instantly see loop-length multipliers (÷2, ×0.75, ×1.5, ×2) to stay locked in at any speed.</li>
+                        <li><strong>Mix Planner:</strong> A two-deck layout shows the exact pitch-shift percentage needed to beatmatch any two tracks, plus loop bridge suggestions for syncopated transitions.</li>
+                        <li><strong>Genre Transitions:</strong> Curated mixing tips for 15 genres including House, Techno, Drum & Bass, Trap, Dubstep, Reggae, Jungle, Trance, and more.</li>
+                        <li><strong>Camelot Wheel:</strong> An interactive harmonic mixing guide that maps every musical key so you always know which tracks will blend naturally.</li>
+                        <li><strong>Tap Tempo:</strong> Tap along to any track to find its BPM on the fly, no hardware required.</li>
+                        <li><strong>Keep Screen On:</strong> Prevent your display from locking mid-set with an OLED-friendly black background that saves battery.</li>
+                    </ul>
+
+                    <h2>Screenshots</h2>
+                    <div class="screenshot-gallery">
+                        <img src="img/dj-bpm-assistant/screenshot-1.png" alt="Screenshot of DJ BPM Assistant BPM Calculator" class="screenshot-image">
+                        <img src="img/dj-bpm-assistant/screenshot-2.png" alt="Screenshot of DJ BPM Assistant Mix Planner" class="screenshot-image">
+                        <img src="img/dj-bpm-assistant/screenshot-3.png" alt="Screenshot of DJ BPM Assistant Camelot Wheel" class="screenshot-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback">
+            <div class="container">
+                <h2 class="section-title">Feedback & Feature Requests</h2>
+                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
+                <form id="feedback-form" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <select name="type" required>
+                            <option value="" disabled selected>Select a message type...</option>
+                            <option value="Feature Request">Feature Request</option>
+                            <option value="Feedback">Feedback</option>
+                            <option value="Assistance">Assistance</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Groove Logic. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/dj-bpm-assistant.js"></script>
+
+</body>
+</html>
