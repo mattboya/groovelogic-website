@@ -103,8 +103,6 @@ The header, footer and `<head>` are copy-pasted across 9 HTML files, so every vi
 Do Phase 0 first if you expect to add more apps or change the layout often.
 
 ## Open questions for Matt
-- App Store URLs for **DJ BPM Assistant** and **WakeMate** (they currently show "App Store — Coming Soon").
 - Real Twitter/X, LinkedIn and GitHub URLs, or should those stay out of the footer?
-- Is the production domain `https://groovelogic.io`? The new social-preview tags assume it.
 - Is there a photo of you for the About section, or should it stay brand art only?
 - Is Android still planned for Dungeon Soundboard (it currently shows an "Android (Soon)" tag)?

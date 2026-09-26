@@ -436,18 +436,6 @@ footer p {
     color: #111;
 }
 
-/* Placeholder for an App Store link that isn't live yet */
-.app-store-button[aria-disabled="true"] {
-    border-color: #444;
-    color: var(--text-color-muted);
-    cursor: default;
-}
-
-.app-store-button[aria-disabled="true"]:hover {
-    background: var(--surface-color);
-    color: var(--text-color-muted);
-}
-
 .app-detail-body h2 {
     font-size: 2rem;
     margin-top: 2rem;
