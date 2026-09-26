@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jsonify Playlist - Groove Logic</title>
+    <meta name="description" content="Jsonify Playlist: convert any Spotify playlist into a clean, portable JSON file in one click.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Groove Logic">
+    <meta property="og:title" content="Jsonify Playlist - Groove Logic">
+    <meta property="og:description" content="Jsonify Playlist: convert any Spotify playlist into a clean, portable JSON file in one click.">
+    <meta property="og:image" content="https://groovelogic.io/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -12,7 +22,7 @@
     <header>
         <nav>
             <a href="index.html">
-                <img src="img/logo_text_grey_background.png" alt="Groove Logic Text Logo" class="header-logo-image">
+                <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
             <ul>
                 <li><a href="index.html#hero">Home</a></li>
@@ -27,7 +37,7 @@
         <section id="app-detail">
             <div class="container">
                 <div class="app-detail-header">
-                    <img src="img/jsonify-playlist-logo.png" alt="Jsonify Playlist App Icon" class="app-detail-icon">
+                    <img src="img/jsonify-playlist-logo.webp" alt="Jsonify Playlist App Icon" class="app-detail-icon">
                     <div class="app-title-group">
                         <h1>Jsonify Playlist</h1>
                         <p>Extract Spotify playlist metadata directly into a perfectly formatted JSON array.</p>
@@ -61,7 +71,7 @@
             <div class="container">
                 <h2 class="section-title">Feedback & Feature Requests</h2>
                 <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
-                <form id="feedback-form" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
+                <form id="feedback-form" data-app="Jsonify Playlist" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
                     <div class="form-group">
                         <select name="type" required>
                             <option value="" disabled selected>Select a message type...</option>
@@ -85,16 +95,15 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Groove Logic. All Rights Reserved.</p>
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
             <div class="social-links">
-                <a href="#">Twitter</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
+                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
 
 </body>
 </html>

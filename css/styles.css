@@ -1,7 +1,6 @@
 /*
   File: css/styles.css
-  Generated: 2025-09-04
-  Description: Removed fixed heights from images to eliminate letterboxing.
+  Description: Global styles for the Groove Logic website.
 */
 
 /* --- Google Font Import --- */
@@ -13,9 +12,11 @@
     --secondary-color: #00F2FF;    /* Neon Cyan/Blue from logo */
     --background-color: #000000;   /* Black from user's image */
     --surface-color: #121212;      /* Very dark gray for cards/headers */
+    --border-color: #2a2a2a;
     --text-color: #F0F0F0;         /* Off-white for readability */
-    --text-color-muted: #a0a0c0;  /* Muted lavender for secondary text */
+    --text-color-muted: #a0a0c0;   /* Muted lavender for secondary text */
     --tag-background: #3c1a5b;     /* Dark purple for tags */
+    --header-height: 68px;
 }
 
 /* --- Global Reset & Base Styles --- */
@@ -25,11 +26,34 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Keep anchored sections from hiding under the sticky header */
+section[id] {
+    scroll-margin-top: var(--header-height);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 2px solid var(--secondary-color);
+    outline-offset: 3px;
 }
 
 /* --- Utility Classes --- */
@@ -43,7 +67,7 @@ body {
 header {
     background-color: var(--surface-color);
     padding: 1rem 0;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -53,23 +77,24 @@ header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .header-logo-image {
-    height: 35px;
+    display: block;
+    height: 36px;
     width: auto;
 }
 
 nav ul {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem 1.25rem;
     list-style: none;
-}
-
-nav ul li {
-    margin-left: 20px;
 }
 
 nav ul li a {
@@ -92,8 +117,8 @@ nav ul li a:hover {
     align-items: center;
     text-align: center;
     min-height: 80vh;
-    padding: 0 20px;
-    background-color: var(--background-color); 
+    padding: 3rem 20px;
+    background-color: var(--background-color);
 }
 
 .hero-logo {
@@ -104,7 +129,8 @@ nav ul li a:hover {
 }
 
 #hero h1 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
+    line-height: 1.2;
     font-weight: 700;
     margin-bottom: 1rem;
     max-width: 800px;
@@ -125,6 +151,7 @@ nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -141,7 +168,8 @@ nav ul li a:hover {
 
 .section-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    line-height: 1.25;
     margin-bottom: 3rem;
     font-weight: 600;
 }
@@ -174,17 +202,11 @@ nav ul li a:hover {
     align-items: center;
 }
 
-.placeholder-image {
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+.about-image img {
+    width: 100%;
+    max-width: 380px;
     border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    color: var(--background-color); 
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 40px rgba(255, 0, 193, 0.15);
 }
 
 /* --- Apps Section Styles --- */
@@ -193,16 +215,16 @@ nav ul li a:hover {
 }
 
 .apps-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 2rem;
-    flex-wrap: wrap;
 }
 
 .app-card-link {
     text-decoration: none;
     color: inherit;
     display: flex;
+    border-radius: 10px;
 }
 
 .app-card {
@@ -210,30 +232,28 @@ nav ul li a:hover {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    flex-basis: 320px;
-    flex-grow: 1;
-    max-width: 350px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.app-card:hover {
+.app-card-link:hover .app-card,
+.app-card-link:focus-visible .app-card {
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(255, 0, 193, 0.2);
 }
 
-/* MARK: Style Change */
 .app-card-image-custom {
+    display: block;
     width: 100%;
-    /* Removed fixed height to allow the image to define its own height */
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
-/* END: Style Change */
 
 .app-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    line-height: 1.3;
     padding: 1rem 1.5rem 0.5rem 1.5rem;
 }
 
@@ -307,17 +327,38 @@ nav ul li a:hover {
     width: 100%;
     padding: 1rem;
     background-color: var(--primary-color);
-    color: #fff; 
+    color: #fff;
     border: none;
     border-radius: 5px;
     font-size: 1.1rem;
     font-weight: 600;
+    font-family: inherit;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .submit-button:hover {
     background-color: var(--secondary-color);
+    color: #111;
+}
+
+.submit-button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.form-status {
+    margin-top: 1rem;
+    text-align: center;
+    min-height: 1.6em;
+}
+
+.form-status.success {
+    color: var(--secondary-color);
+}
+
+.form-status.error {
+    color: #ff6b8b;
 }
 
 /* --- Footer Styles --- */
@@ -325,7 +366,7 @@ footer {
     background-color: var(--background-color);
     padding: 2rem 0;
     text-align: center;
-    border-top: 1px solid #2a2a2a;
+    border-top: 1px solid var(--border-color);
 }
 
 footer p {
@@ -354,7 +395,7 @@ footer p {
     gap: 2rem;
     align-items: center;
     margin-bottom: 4rem;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid var(--border-color);
     padding-bottom: 2rem;
 }
 
@@ -367,7 +408,8 @@ footer p {
 }
 
 .app-title-group h1 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    line-height: 1.2;
     margin-bottom: 0.5rem;
 }
 
@@ -392,6 +434,18 @@ footer p {
 .app-store-button:hover {
     background-color: var(--secondary-color);
     color: #111;
+}
+
+/* Placeholder for an App Store link that isn't live yet */
+.app-store-button[aria-disabled="true"] {
+    border-color: #444;
+    color: var(--text-color-muted);
+    cursor: default;
+}
+
+.app-store-button[aria-disabled="true"]:hover {
+    background: var(--surface-color);
+    color: var(--text-color-muted);
 }
 
 .app-detail-body h2 {
@@ -420,24 +474,18 @@ footer p {
 }
 
 .screenshot-gallery {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-    justify-content: space-between;
     margin-top: 1rem;
-    flex-wrap: wrap;
 }
 
-/* MARK: Style Change */
 .screenshot-image {
-    flex-basis: 30%;
-    flex-grow: 1;
-    /* Removed fixed height and object-fit to let the image define its own height */
+    display: block;
+    width: 100%;
     border-radius: 10px;
-    border: 1px solid #2a2a2a;
-    min-width: 280px;
-    width: 100%; /* Ensures image scales within its flex container */
+    border: 1px solid var(--border-color);
 }
-/* END: Style Change */
 
 /* --- Feedback Form Styles --- */
 #feedback {
@@ -475,7 +523,8 @@ footer p {
 }
 
 .privacy-content h1 {
-    font-size: 2.5rem;
+    font-size: clamp(1.9rem, 5vw, 2.5rem);
+    line-height: 1.25;
     margin-bottom: 1rem;
     color: var(--text-color);
 }
@@ -525,6 +574,7 @@ footer p {
     color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s ease;
+    overflow-wrap: anywhere;
 }
 
 .privacy-content a:hover {
@@ -532,17 +582,65 @@ footer p {
     text-decoration: underline;
 }
 
-/* Button styling for privacy policy page */
+/* Button spacing when several app-store-buttons sit side by side */
 .app-title-group .app-store-button {
     margin-right: 1rem;
     margin-bottom: 0.5rem;
 }
 
+/* --- Responsive --- */
 @media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .app-detail-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.25rem;
+    }
+
+    .app-detail-icon {
+        width: 120px;
+        height: 120px;
+    }
+
     .app-title-group .app-store-button {
         display: block;
+        margin-right: 0;
         margin-bottom: 1rem;
         text-align: center;
     }
+
+    .app-detail-body h2 {
+        font-size: 1.6rem;
+    }
 }
-/* Total lines: 521 */
+
+@media (max-width: 480px) {
+    :root {
+        --header-height: 110px;
+    }
+
+    header nav {
+        justify-content: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        font-size: 0.95rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+    }
+}
