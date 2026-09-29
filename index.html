@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Groove Logic - Mobile App Development</title>
     <meta name="description" content="Groove Logic is an independent studio designing and building simple, useful mobile and web apps — Dungeon Soundboard, DJ BPM Assistant, WakeMate and Jsonify Playlist.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#07040d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groove Logic">
     <meta property="og:title" content="Groove Logic - Mobile App Development">
@@ -16,17 +16,27 @@
     <link rel="canonical" href="https://groovelogic.io/">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    
+
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/unbounded-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="has-hero">
 
-    <header>
-        <nav>
-            <a href="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- partial:header -->
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" class="brand">
                 <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
-            <ul>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#apps">Apps</a></li>
@@ -34,118 +44,227 @@
             </ul>
         </nav>
     </header>
+    <!-- /partial:header -->
 
-    <main>
-        <section id="hero">
-            <img src="img/logo_black_background.webp" alt="Groove Logic" class="hero-logo" width="692" height="536">
-            <h1>Crafting Intuitive Mobile Experiences</h1>
-            <p>I design and develop nice, simple apps that users love.</p>
-            <a href="#contact" class="cta-button">Get In Touch</a>
-        </section>
-
-        <section id="about">
-            <div class="container">
-                <h2 class="section-title">Simple, Useful Apps</h2>
-                <div class="about-content">
-                    <div class="about-text">
-                        <h3>Philosophy</h3>
-                        <p>At Groove Logic, my philosophy is simple: technology should serve a clear purpose, elegantly. I focus on creating niche mobile apps that solve specific problems without unnecessary complexity. I believe the most powerful tools are the ones that are intuitive, useful, and a pleasure to use.</p>
-                        <p>My development process is personal and direct. By handling every stage from concept to launch myself, I ensure a cohesive vision and a final product that is meticulously crafted to meet user needs and deliver genuine value.</p>
-                    </div>
-                    <div class="about-image">
-                        <img src="img/groove_logic_1.webp" alt="Groove Logic neon cassette logo" width="800" height="800" loading="lazy">
-                    </div>
+    <main id="main">
+        <section id="hero" class="hero">
+            <div class="hero-scene" aria-hidden="true">
+                <div class="hero-stars"></div>
+                <div class="hero-sun"></div>
+                <div class="hero-floor"><div class="hero-grid"></div></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-logo-wrap">
+                    <img src="img/logo-cassette.webp" alt="Groove Logic" class="hero-logo" width="664" height="508" fetchpriority="high">
+                </div>
+                <h1>Crafting Intuitive <span class="text-gradient">Mobile Experiences</span></h1>
+                <p class="hero-lede">I design and develop nice, simple apps that users love.</p>
+                <div class="hero-actions">
+                    <a href="#apps" class="btn btn-primary">See the Apps</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="eq" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
             </div>
         </section>
 
-        <section id="apps">
+        <section id="about" class="section section-alt">
             <div class="container">
-                <h2 class="section-title">Apps</h2>
-                <div class="apps-grid">
-                    <a href="dungeon-soundboard.html" class="app-card-link">
-                        <div class="app-card">
-                            <img src="img/dungeon-soundboard-logo-speaker.webp" alt="Dungeon Soundboard App Icon" class="app-card-image-custom" width="640" height="640" loading="lazy">
-                            <h3>Dungeon Soundboard</h3>
-                            <p>Elevate your tabletop RPG sessions. Seamlessly weave cinematic soundscapes using Spotify for ambiance, and trigger custom sound effects for unforgettable moments.</p>
-                            <div class="app-tags">
-                                <span class="tag">iOS</span>
-                                <span class="tag">Swift</span>
-                                <span class="tag">Android (Soon)</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="jsonify-playlist.html" class="app-card-link">
-                        <div class="app-card">
-                            <img src="img/jsonify-playlist-logo.webp" alt="Jsonify Playlist App Icon" class="app-card-image-custom" width="640" height="640" loading="lazy">
-                            <h3>Jsonify Playlist</h3>
-                            <p>Instantly convert any Spotify playlist into a clean, portable JSON file. Perfect for developers, DJs, or anyone looking to extract their raw music metadata.</p>
-                            <div class="app-tags">
-                                <span class="tag">Web App</span>
-                                <span class="tag">Next.js</span>
-                                <span class="tag">TypeScript</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="dj-bpm-assistant.html" class="app-card-link">
-                        <div class="app-card">
-                            <img src="img/dj-bpm-assistant-logo.webp" alt="DJ BPM Assistant App Icon" class="app-card-image-custom" width="640" height="640" loading="lazy">
-                            <h3>DJ BPM Assistant</h3>
-                            <p>Your pocket DJ toolkit. BPM math, mix planning, genre transitions, and a Camelot Wheel — all offline, all instant.</p>
-                            <div class="app-tags">
-                                <span class="tag">iOS</span>
-                                <span class="tag">Swift</span>
-                                <span class="tag">Music</span>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="wakemate.html" class="app-card-link">
-                        <div class="app-card">
-                            <img src="img/wakemate-logo.webp" alt="WakeMate App Icon" class="app-card-image-custom" width="640" height="640" loading="lazy">
-                            <h3>WakeMate</h3>
-                            <p>Set alarms for the people you love. WakeMate lets you send wake-up calls directly to family and friends' phones.</p>
-                            <div class="app-tags">
-                                <span class="tag">iOS</span>
-                                <span class="tag">Swift</span>
-                                <span class="tag">Firebase</span>
-                            </div>
-                        </div>
-                    </a>
+                <header class="section-head reveal">
+                    <p class="eyebrow">01 / About</p>
+                    <h2 class="section-title">Simple, Useful Apps</h2>
+                </header>
+                <div class="about-grid">
+                    <div class="about-text reveal">
+                        <h3>Philosophy</h3>
+                        <p>At Groove Logic, my philosophy is simple: technology should serve a clear purpose, elegantly. I focus on creating niche mobile apps that solve specific problems without unnecessary complexity. I believe the most powerful tools are the ones that are intuitive, useful, and a pleasure to use.</p>
+                        <p>My development process is personal and direct. By handling every stage from concept to launch myself, I ensure a cohesive vision and a final product that is meticulously crafted to meet user needs and deliver genuine value.</p>
                     </div>
+                    <figure class="about-art reveal">
+                        <img src="img/groove_logic_1.webp" alt="Groove Logic neon cassette logo" width="800" height="800" loading="lazy">
+                    </figure>
+                </div>
+                <ol class="process reveal" aria-label="From concept to launch">
+                    <li><span class="process-num">01</span><span class="process-label">Concept</span></li>
+                    <li><span class="process-num">02</span><span class="process-label">Design</span></li>
+                    <li><span class="process-num">03</span><span class="process-label">Build</span></li>
+                    <li><span class="process-num">04</span><span class="process-label">Launch</span></li>
+                </ol>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="apps" class="section">
             <div class="container">
-                <h2 class="section-title">Let's Build Together</h2>
-                <p class="contact-subtitle">Have a project in mind? I'd love to hear about it.</p>
-                <form id="contact-form" action="https://formspree.io/f/xldlponl" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
+                <header class="section-head reveal">
+                    <p class="eyebrow">02 / Apps</p>
+                    <h2 class="section-title">Apps</h2>
+                </header>
+                <ul class="apps-grid">
+                    <li class="reveal">
+                        <a href="dungeon-soundboard.html" class="app-tile" style="--accent: var(--accent-dungeon-soundboard)">
+                            <div class="app-tile-art">
+                                <img src="img/dungeon-soundboard-logo-speaker.webp" alt="Dungeon Soundboard App Icon" class="app-tile-icon" width="640" height="640" loading="lazy" style="view-transition-name: icon-dungeon-soundboard">
+                            </div>
+                            <div class="app-tile-body">
+                                <span class="status-badge">Live on iOS</span>
+                                <h3>Dungeon Soundboard</h3>
+                                <p>Elevate your tabletop RPG sessions. Seamlessly weave cinematic soundscapes using Spotify for ambiance, and trigger custom sound effects for unforgettable moments.</p>
+                                <ul class="app-tags" aria-label="Platforms and technology">
+                                <li class="tag">iOS</li>
+                                <li class="tag">Swift</li>
+                                <li class="tag">Android (Soon)</li>
+                                </ul>
+                                <span class="app-tile-cta" aria-hidden="true">View app <span class="arrow">&rarr;</span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="reveal">
+                        <a href="jsonify-playlist.html" class="app-tile" style="--accent: var(--accent-jsonify-playlist)">
+                            <div class="app-tile-art">
+                                <img src="img/jsonify-playlist-logo.webp" alt="Jsonify Playlist App Icon" class="app-tile-icon" width="640" height="640" loading="lazy" style="view-transition-name: icon-jsonify-playlist">
+                            </div>
+                            <div class="app-tile-body">
+                                <span class="status-badge">Web app</span>
+                                <h3>Jsonify Playlist</h3>
+                                <p>Instantly convert any Spotify playlist into a clean, portable JSON file. Perfect for developers, DJs, or anyone looking to extract their raw music metadata.</p>
+                                <ul class="app-tags" aria-label="Platforms and technology">
+                                <li class="tag">Web App</li>
+                                <li class="tag">Next.js</li>
+                                <li class="tag">TypeScript</li>
+                                </ul>
+                                <span class="app-tile-cta" aria-hidden="true">View app <span class="arrow">&rarr;</span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="reveal">
+                        <a href="dj-bpm-assistant.html" class="app-tile" style="--accent: var(--accent-dj-bpm-assistant)">
+                            <div class="app-tile-art">
+                                <img src="img/dj-bpm-assistant-logo.webp" alt="DJ BPM Assistant App Icon" class="app-tile-icon" width="640" height="640" loading="lazy" style="view-transition-name: icon-dj-bpm-assistant">
+                            </div>
+                            <div class="app-tile-body">
+                                <span class="status-badge">Live on iOS</span>
+                                <h3>DJ BPM Assistant</h3>
+                                <p>Your pocket DJ toolkit. BPM math, mix planning, genre transitions, and a Camelot Wheel — all offline, all instant.</p>
+                                <ul class="app-tags" aria-label="Platforms and technology">
+                                <li class="tag">iOS</li>
+                                <li class="tag">Swift</li>
+                                <li class="tag">Music</li>
+                                </ul>
+                                <span class="app-tile-cta" aria-hidden="true">View app <span class="arrow">&rarr;</span></span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="reveal">
+                        <a href="wakemate.html" class="app-tile" style="--accent: var(--accent-wakemate)">
+                            <div class="app-tile-art">
+                                <img src="img/wakemate-logo.webp" alt="WakeMate App Icon" class="app-tile-icon" width="640" height="640" loading="lazy" style="view-transition-name: icon-wakemate">
+                            </div>
+                            <div class="app-tile-body">
+                                <span class="status-badge">Live on iOS</span>
+                                <h3>WakeMate</h3>
+                                <p>Set alarms for the people you love. WakeMate lets you send wake-up calls directly to family and friends' phones.</p>
+                                <ul class="app-tags" aria-label="Platforms and technology">
+                                <li class="tag">iOS</li>
+                                <li class="tag">Swift</li>
+                                <li class="tag">Firebase</li>
+                                </ul>
+                                <span class="app-tile-cta" aria-hidden="true">View app <span class="arrow">&rarr;</span></span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-alt">
+            <div class="container contact-grid">
+                <div class="contact-intro reveal">
+                    <p class="eyebrow">03 / Contact</p>
+                    <h2 class="section-title">Let's Build Together</h2>
+                    <p class="section-lede">Have a project in mind? I'd love to hear about it.</p>
+                    <a href="mailto:matt@groovelogic.io" class="contact-email">matt@groovelogic.io</a>
+                </div>
+                <form id="contact-form" action="https://formspree.io/f/xldlponl" method="POST" class="contact-form reveal">
+                    <div class="field">
+                        <input id="cf-name" type="text" name="name" placeholder=" " required autocomplete="name">
+                        <label for="cf-name">Your Name</label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="field">
+                        <input id="cf-email" type="email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="cf-email">Your Email</label>
                     </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
+                    <div class="field">
+                        <input id="cf-subject" type="text" name="subject" placeholder=" " required>
+                        <label for="cf-subject">Subject</label>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <div class="field">
+                        <textarea id="cf-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="cf-message">Your Message</label>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
+    <!-- partial:footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <img src="img/logo-wordmark.webp" alt="Groove Logic home" width="113" height="36" loading="lazy">
+                </a>
+                <p>Simple, useful apps.</p>
+                <a href="mailto:matt@groovelogic.io" class="footer-email">matt@groovelogic.io</a>
             </div>
+            <nav class="footer-col" aria-label="Apps">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard.html">Dungeon Soundboard</a></li>
+                    <li><a href="jsonify-playlist.html">Jsonify Playlist</a></li>
+                    <li><a href="dj-bpm-assistant.html">DJ BPM Assistant</a></li>
+                    <li><a href="wakemate.html">WakeMate</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard-privacy.html">Dungeon Soundboard Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-privacy.html">DJ BPM Assistant Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-terms.html">DJ BPM Assistant Terms</a></li>
+                    <li><a href="wakemate-privacy.html">WakeMate Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- /partial:footer -->
 
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>

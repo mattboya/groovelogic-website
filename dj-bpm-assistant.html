@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DJ BPM Assistant - Groove Logic</title>
     <meta name="description" content="DJ BPM Assistant: BPM math, mix planning, genre transitions, tap tempo and a Camelot Wheel — all offline, right on your iPhone.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#07040d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groove Logic">
     <meta property="og:title" content="DJ BPM Assistant - Groove Logic">
@@ -17,16 +17,26 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/unbounded-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-nav="apps" style="--accent: var(--accent-dj-bpm-assistant)">
 
-    <header>
-        <nav>
-            <a href="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- partial:header -->
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" class="brand">
                 <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
-            <ul>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="index.html#hero">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#apps">Apps</a></li>
@@ -34,81 +44,178 @@
             </ul>
         </nav>
     </header>
+    <!-- /partial:header -->
 
-    <main>
-        <section id="app-detail">
-            <div class="container">
-                <div class="app-detail-header">
-                    <img src="img/dj-bpm-assistant-logo.webp" alt="DJ BPM Assistant App Icon" class="app-detail-icon">
-                    <div class="app-title-group">
-                        <h1>DJ BPM Assistant</h1>
-                        <p>Professional mixing tools in your pocket.</p>
-                        <a href="https://apps.apple.com/us/app/dj-bpm-assistant/id6751517119" target="_blank" rel="noopener noreferrer" class="app-store-button">View on App Store</a>
-                        <a href="dj-bpm-assistant-privacy.html" class="app-store-button">Privacy Policy</a>
-                        <a href="dj-bpm-assistant-terms.html" class="app-store-button">Terms of Use</a>
+    <main id="main">
+        <section class="app-hero">
+            <div class="app-hero-bg" aria-hidden="true"></div>
+            <div class="container app-hero-grid">
+                <div class="app-hero-copy">
+                    <a href="index.html#apps" class="back-link">&larr; All apps</a>
+                    <img src="img/dj-bpm-assistant-logo.webp" alt="DJ BPM Assistant App Icon" class="app-detail-icon" width="640" height="640" style="view-transition-name: icon-dj-bpm-assistant">
+                    <h1>DJ BPM Assistant</h1>
+                    <p class="app-tagline">Professional mixing tools in your pocket.</p>
+                    <div class="app-actions">
+                            <a href="https://apps.apple.com/us/app/dj-bpm-assistant/id6751517119" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on App Store</a>
+                            <a href="dj-bpm-assistant-privacy.html" class="btn btn-ghost">Privacy Policy</a>
+                            <a href="dj-bpm-assistant-terms.html" class="btn btn-ghost">Terms of Use</a>
                     </div>
                 </div>
-
-                <div class="app-detail-body">
-                    <h2>Description</h2>
-                    <p>Whether you're learning to mix or playing your hundredth gig, DJ BPM Assistant gives you the math and music theory you need, right on your iPhone. Calculate BPM multipliers in an instant, plan your next mix with a two-deck pitch-shift analyzer, explore transition tips across 15 genres, and navigate harmonic mixing with an interactive Camelot Wheel — all without needing an internet connection.</p>
-
-                    <h2>Key Features</h2>
-                    <ul class="features-list">
-                        <li><strong>BPM Calculator:</strong> Enter any BPM and instantly see loop-length multipliers (÷2, ×0.75, ×1.5, ×2) to stay locked in at any speed.</li>
-                        <li><strong>Mix Planner:</strong> A two-deck layout shows the exact pitch-shift percentage needed to beatmatch any two tracks, plus loop bridge suggestions for syncopated transitions.</li>
-                        <li><strong>Genre Transitions:</strong> Curated mixing tips for 15 genres including House, Techno, Drum & Bass, Trap, Dubstep, Reggae, Jungle, Trance, and more.</li>
-                        <li><strong>Camelot Wheel:</strong> An interactive harmonic mixing guide that maps every musical key so you always know which tracks will blend naturally.</li>
-                        <li><strong>Tap Tempo:</strong> Tap along to any track to find its BPM on the fly, no hardware required.</li>
-                        <li><strong>Keep Screen On:</strong> Prevent your display from locking mid-set with an OLED-friendly black background that saves battery.</li>
-                    </ul>
-
-                    <h2>Screenshots</h2>
-                    <div class="screenshot-gallery">
-                        <img src="img/dj-bpm-assistant/image1.webp" alt="DJ BPM Assistant BPM calculator showing loop multipliers" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dj-bpm-assistant/image2.webp" alt="DJ BPM Assistant two-deck mix planner" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dj-bpm-assistant/image3.webp" alt="DJ BPM Assistant genre transition tips" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dj-bpm-assistant/image4.webp" alt="DJ BPM Assistant interactive Camelot Wheel" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dj-bpm-assistant/image5.webp" alt="DJ BPM Assistant compatible key moves for harmonic mixing" class="screenshot-image" width="640" height="1387" loading="lazy">
-                    </div>
+                <div class="app-hero-visual" aria-hidden="true">
+                        <div class="hero-shot">
+                            <img src="img/dj-bpm-assistant/image1.webp" alt="" width="640" height="1387">
+                        </div>
                 </div>
             </div>
         </section>
 
-        <section id="feedback">
+        <section id="app-detail" class="section">
             <div class="container">
-                <h2 class="section-title">Feedback & Feature Requests</h2>
-                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
-                <form id="feedback-form" data-app="DJ BPM Assistant" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <select name="type" required>
+                <div class="app-overview reveal">
+                    <h2>Description</h2>
+                    <p>Whether you're learning to mix or playing your hundredth gig, DJ BPM Assistant gives you the math and music theory you need, right on your iPhone. Calculate BPM multipliers in an instant, plan your next mix with a two-deck pitch-shift analyzer, explore transition tips across 15 genres, and navigate harmonic mixing with an interactive Camelot Wheel — all without needing an internet connection.</p>
+                </div>
+                <h2 class="block-title reveal">Key Features</h2>
+                <ul class="feature-grid">
+                    <li class="feature-card reveal">
+                        <span class="feature-index">01</span>
+                        <h3>BPM Calculator</h3>
+                        <p>Enter any BPM and instantly see loop-length multipliers (÷2, ×0.75, ×1.5, ×2) to stay locked in at any speed.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">02</span>
+                        <h3>Mix Planner</h3>
+                        <p>A two-deck layout shows the exact pitch-shift percentage needed to beatmatch any two tracks, plus loop bridge suggestions for syncopated transitions.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">03</span>
+                        <h3>Genre Transitions</h3>
+                        <p>Curated mixing tips for 15 genres including House, Techno, Drum & Bass, Trap, Dubstep, Reggae, Jungle, Trance, and more.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">04</span>
+                        <h3>Camelot Wheel</h3>
+                        <p>An interactive harmonic mixing guide that maps every musical key so you always know which tracks will blend naturally.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">05</span>
+                        <h3>Tap Tempo</h3>
+                        <p>Tap along to any track to find its BPM on the fly, no hardware required.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">06</span>
+                        <h3>Keep Screen On</h3>
+                        <p>Prevent your display from locking mid-set with an OLED-friendly black background that saves battery.</p>
+                    </li>
+                </ul>
+                <div class="carousel-head reveal">
+                    <h2 class="block-title">Screenshots</h2>
+                    <div class="carousel-controls">
+                        <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous screenshots">&larr;</button>
+                        <button type="button" class="carousel-btn" data-dir="1" aria-label="Next screenshots">&rarr;</button>
+                    </div>
+                </div>
+                <div class="carousel reveal">
+                    <ul class="carousel-track" tabindex="0" aria-label="DJ BPM Assistant screenshots">
+                        <li>
+                            <button type="button" class="shot" data-index="0" aria-label="Enlarge: DJ BPM Assistant BPM calculator showing loop multipliers">
+                                <img src="img/dj-bpm-assistant/image1.webp" alt="DJ BPM Assistant BPM calculator showing loop multipliers" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="1" aria-label="Enlarge: DJ BPM Assistant two-deck mix planner">
+                                <img src="img/dj-bpm-assistant/image2.webp" alt="DJ BPM Assistant two-deck mix planner" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="2" aria-label="Enlarge: DJ BPM Assistant genre transition tips">
+                                <img src="img/dj-bpm-assistant/image3.webp" alt="DJ BPM Assistant genre transition tips" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="3" aria-label="Enlarge: DJ BPM Assistant interactive Camelot Wheel">
+                                <img src="img/dj-bpm-assistant/image4.webp" alt="DJ BPM Assistant interactive Camelot Wheel" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="4" aria-label="Enlarge: DJ BPM Assistant compatible key moves for harmonic mixing">
+                                <img src="img/dj-bpm-assistant/image5.webp" alt="DJ BPM Assistant compatible key moves for harmonic mixing" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="section section-alt">
+            <div class="container narrow">
+                <header class="section-head reveal">
+                    <h2 class="section-title">Feedback &amp; Feature Requests</h2>
+                    <p class="section-lede">Want to request a feature or provide feedback? Contact us!</p>
+                </header>
+                <form id="feedback-form" data-app="DJ BPM Assistant" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form reveal">
+                    <div class="field field-select">
+                        <select id="fb-type" name="type" required>
                             <option value="" disabled selected>Select a message type...</option>
                             <option value="Feature Request">Feature Request</option>
                             <option value="Feedback">Feedback</option>
                             <option value="Assistance">Assistance</option>
                             <option value="Other">Other</option>
                         </select>
+                        <label for="fb-type">Message type</label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="field">
+                        <input id="fb-email" type="email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="fb-email">Your Email</label>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <div class="field">
+                        <textarea id="fb-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="fb-message">Your Message</label>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
+    <!-- partial:footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <img src="img/logo-wordmark.webp" alt="Groove Logic home" width="113" height="36" loading="lazy">
+                </a>
+                <p>Simple, useful apps.</p>
+                <a href="mailto:matt@groovelogic.io" class="footer-email">matt@groovelogic.io</a>
             </div>
+            <nav class="footer-col" aria-label="Apps">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard.html">Dungeon Soundboard</a></li>
+                    <li><a href="jsonify-playlist.html">Jsonify Playlist</a></li>
+                    <li><a href="dj-bpm-assistant.html">DJ BPM Assistant</a></li>
+                    <li><a href="wakemate.html">WakeMate</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard-privacy.html">Dungeon Soundboard Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-privacy.html">DJ BPM Assistant Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-terms.html">DJ BPM Assistant Terms</a></li>
+                    <li><a href="wakemate-privacy.html">WakeMate Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- /partial:footer -->
+
+    <div class="mobile-cta" aria-hidden="true">
+        <a href="https://apps.apple.com/us/app/dj-bpm-assistant/id6751517119" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" tabindex="-1">View on App Store</a>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>

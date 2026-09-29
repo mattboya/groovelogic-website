@@ -2,6 +2,19 @@
 
 Goal: turn groovelogic.io from a clean dark template into a site that *feels* like the brand: the neon cassette, the pink-to-cyan wordmark, music and late-night studio energy. Keep it fast, accessible and easy to maintain as plain HTML/CSS/JS.
 
+## Status (September 2026)
+
+Phases 1–8 are **done**, plus the custom 404 page from Phase 9. Instead of adopting a static site generator (Phase 0), the shared header and footer now live in `partials/` and are copied into every page by `scripts/sync-partials.py` (see the README).
+
+Deliberately left out:
+- **Stats row** (Phase 5): it would add claims to the site that you haven't written.
+- **Featured double-width tile** (Phase 4): with four apps, four equal tiles read better.
+- **Official App Store badges** (Phase 4): the site uses the neon button style instead. Swap in Apple's badge artwork if you prefer it.
+
+Still to do from Phase 9: a social preview image per app, `srcset` for screenshots, and a Lighthouse pass on the live site.
+
+---
+
 Each phase below can ship on its own. The **risk** score (0–10) is how likely the phase is to break existing behaviour, with the files most likely to be affected.
 
 ---

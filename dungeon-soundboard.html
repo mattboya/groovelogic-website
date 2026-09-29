@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dungeon Soundboard - Groove Logic</title>
     <meta name="description" content="Dungeon Soundboard: cinematic Spotify ambiance and custom sound effects for your tabletop RPG sessions. Available on iOS.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#07040d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groove Logic">
     <meta property="og:title" content="Dungeon Soundboard - Groove Logic">
@@ -16,17 +16,27 @@
     <link rel="canonical" href="https://groovelogic.io/dungeon-soundboard.html">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    
+
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/unbounded-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-nav="apps" style="--accent: var(--accent-dungeon-soundboard)">
 
-    <header>
-        <nav>
-            <a href="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- partial:header -->
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" class="brand">
                 <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
-            <ul>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="index.html#hero">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#apps">Apps</a></li>
@@ -34,76 +44,157 @@
             </ul>
         </nav>
     </header>
+    <!-- /partial:header -->
 
-    <main>
-        <section id="app-detail">
-            <div class="container">
-                <div class="app-detail-header">
-                    <img src="img/dungeon-soundboard-logo-speaker.webp" alt="Dungeon Soundboard App Icon" class="app-detail-icon">
-                    <div class="app-title-group">
-                        <h1>Dungeon Soundboard</h1>
-                        <p>Cinematic sound for your tabletop RPG sessions.</p>
-                        <a href="https://apps.apple.com/us/app/dungeon-soundboard/id6751516899" target="_blank" rel="noopener noreferrer" class="app-store-button">View on App Store</a>
-                        <a href="dungeon-soundboard-privacy.html" class="app-store-button">Privacy Policy</a>
+    <main id="main">
+        <section class="app-hero">
+            <div class="app-hero-bg" aria-hidden="true"></div>
+            <div class="container app-hero-grid">
+                <div class="app-hero-copy">
+                    <a href="index.html#apps" class="back-link">&larr; All apps</a>
+                    <img src="img/dungeon-soundboard-logo-speaker.webp" alt="Dungeon Soundboard App Icon" class="app-detail-icon" width="640" height="640" style="view-transition-name: icon-dungeon-soundboard">
+                    <h1>Dungeon Soundboard</h1>
+                    <p class="app-tagline">Cinematic sound for your tabletop RPG sessions.</p>
+                    <div class="app-actions">
+                            <a href="https://apps.apple.com/us/app/dungeon-soundboard/id6751516899" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View on App Store</a>
+                            <a href="dungeon-soundboard-privacy.html" class="btn btn-ghost">Privacy Policy</a>
                     </div>
                 </div>
-
-                <div class="app-detail-body">
-                    <h2>Description</h2>
-                    <p>Elevate your tabletop RPG sessions from simple dice rolls to unforgettable, immersive experiences. Dungeon Soundboard is the ultimate audio companion for Game Masters, allowing you to seamlessly weave cinematic soundscapes using Spotify for ambiance and trigger custom sound effects for critical moments. Whether it's the roar of a dragon, the clang of swords, or the eerie silence of a dungeon, you have complete control over the auditory world of your game.</p>
-
-                    <h2>Key Features</h2>
-                    <ul class="features-list">
-                        <li><strong>Spotify Integration:</strong> Instantly access and play ambient music and soundscapes from any Spotify playlist to set the perfect mood.</li>
-                        <li><strong>Custom Soundboard:</strong> Upload and organize your own sound effects for quick access during gameplay. Perfect for monster roars, spell effects, and character actions.</li>
-                        <li><strong>Intuitive Interface:</strong> Designed for GMs in the heat of the moment, the interface is clean, simple, and allows for quick triggering of sounds without disrupting the game's flow.</li>
-                        <li><strong>Crossfade & Looping:</strong> Smoothly transition between ambient tracks and loop background noises for continuous atmosphere.</li>
-                    </ul>
-                    
-                    <h2>Screenshots</h2>
-                    <div class="screenshot-gallery">
-                        <img src="img/dungeon-soundboard/screenshot-1.webp" alt="Screenshot of Dungeon Soundboard main screen" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dungeon-soundboard/screenshot-2.webp" alt="Screenshot of Dungeon Soundboard playlist integration" class="screenshot-image" width="640" height="1387" loading="lazy">
-                        <img src="img/dungeon-soundboard/screenshot-3.webp" alt="Screenshot of Dungeon Soundboard custom effects" class="screenshot-image" width="640" height="1387" loading="lazy">
-                    </div>
-                    </div>
+                <div class="app-hero-visual" aria-hidden="true">
+                        <div class="device">
+                            <img src="img/dungeon-soundboard/screenshot-1.webp" alt="" width="640" height="1387">
+                        </div>
+                </div>
             </div>
         </section>
 
-        <section id="feedback">
+        <section id="app-detail" class="section">
             <div class="container">
-                <h2 class="section-title">Feedback & Feature Requests</h2>
-                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
-                <form id="feedback-form" data-app="Dungeon Soundboard" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <select name="type" required>
+                <div class="app-overview reveal">
+                    <h2>Description</h2>
+                    <p>Elevate your tabletop RPG sessions from simple dice rolls to unforgettable, immersive experiences. Dungeon Soundboard is the ultimate audio companion for Game Masters, allowing you to seamlessly weave cinematic soundscapes using Spotify for ambiance and trigger custom sound effects for critical moments. Whether it's the roar of a dragon, the clang of swords, or the eerie silence of a dungeon, you have complete control over the auditory world of your game.</p>
+                </div>
+                <h2 class="block-title reveal">Key Features</h2>
+                <ul class="feature-grid">
+                    <li class="feature-card reveal">
+                        <span class="feature-index">01</span>
+                        <h3>Spotify Integration</h3>
+                        <p>Instantly access and play ambient music and soundscapes from any Spotify playlist to set the perfect mood.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">02</span>
+                        <h3>Custom Soundboard</h3>
+                        <p>Upload and organize your own sound effects for quick access during gameplay. Perfect for monster roars, spell effects, and character actions.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">03</span>
+                        <h3>Intuitive Interface</h3>
+                        <p>Designed for GMs in the heat of the moment, the interface is clean, simple, and allows for quick triggering of sounds without disrupting the game's flow.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">04</span>
+                        <h3>Crossfade & Looping</h3>
+                        <p>Smoothly transition between ambient tracks and loop background noises for continuous atmosphere.</p>
+                    </li>
+                </ul>
+                <div class="carousel-head reveal">
+                    <h2 class="block-title">Screenshots</h2>
+                    <div class="carousel-controls">
+                        <button type="button" class="carousel-btn" data-dir="-1" aria-label="Previous screenshots">&larr;</button>
+                        <button type="button" class="carousel-btn" data-dir="1" aria-label="Next screenshots">&rarr;</button>
+                    </div>
+                </div>
+                <div class="carousel reveal">
+                    <ul class="carousel-track" tabindex="0" aria-label="Dungeon Soundboard screenshots">
+                        <li>
+                            <button type="button" class="shot" data-index="0" aria-label="Enlarge: Screenshot of Dungeon Soundboard main screen">
+                                <img src="img/dungeon-soundboard/screenshot-1.webp" alt="Screenshot of Dungeon Soundboard main screen" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="1" aria-label="Enlarge: Screenshot of Dungeon Soundboard playlist integration">
+                                <img src="img/dungeon-soundboard/screenshot-2.webp" alt="Screenshot of Dungeon Soundboard playlist integration" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                        <li>
+                            <button type="button" class="shot" data-index="2" aria-label="Enlarge: Screenshot of Dungeon Soundboard custom effects">
+                                <img src="img/dungeon-soundboard/screenshot-3.webp" alt="Screenshot of Dungeon Soundboard custom effects" width="640" height="1387" loading="lazy">
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="feedback" class="section section-alt">
+            <div class="container narrow">
+                <header class="section-head reveal">
+                    <h2 class="section-title">Feedback &amp; Feature Requests</h2>
+                    <p class="section-lede">Want to request a feature or provide feedback? Contact us!</p>
+                </header>
+                <form id="feedback-form" data-app="Dungeon Soundboard" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form reveal">
+                    <div class="field field-select">
+                        <select id="fb-type" name="type" required>
                             <option value="" disabled selected>Select a message type...</option>
                             <option value="Feature Request">Feature Request</option>
                             <option value="Feedback">Feedback</option>
                             <option value="Assistance">Assistance</option>
                             <option value="Other">Other</option>
                         </select>
+                        <label for="fb-type">Message type</label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="field">
+                        <input id="fb-email" type="email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="fb-email">Your Email</label>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <div class="field">
+                        <textarea id="fb-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="fb-message">Your Message</label>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
+    <!-- partial:footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <img src="img/logo-wordmark.webp" alt="Groove Logic home" width="113" height="36" loading="lazy">
+                </a>
+                <p>Simple, useful apps.</p>
+                <a href="mailto:matt@groovelogic.io" class="footer-email">matt@groovelogic.io</a>
             </div>
+            <nav class="footer-col" aria-label="Apps">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard.html">Dungeon Soundboard</a></li>
+                    <li><a href="jsonify-playlist.html">Jsonify Playlist</a></li>
+                    <li><a href="dj-bpm-assistant.html">DJ BPM Assistant</a></li>
+                    <li><a href="wakemate.html">WakeMate</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard-privacy.html">Dungeon Soundboard Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-privacy.html">DJ BPM Assistant Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-terms.html">DJ BPM Assistant Terms</a></li>
+                    <li><a href="wakemate-privacy.html">WakeMate Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- /partial:footer -->
+
+    <div class="mobile-cta" aria-hidden="true">
+        <a href="https://apps.apple.com/us/app/dungeon-soundboard/id6751516899" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" tabindex="-1">View on App Store</a>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>

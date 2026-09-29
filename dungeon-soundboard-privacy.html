@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Dungeon Soundboard - Groove Logic</title>
     <meta name="description" content="Privacy Policy for the Dungeon Soundboard app by Groove Logic.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#07040d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groove Logic">
     <meta property="og:title" content="Privacy Policy - Dungeon Soundboard - Groove Logic">
@@ -17,16 +17,26 @@
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/unbounded-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-nav="apps">
 
-    <header>
-        <nav>
-            <a href="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- partial:header -->
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" class="brand">
                 <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
-            <ul>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="index.html#hero">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#apps">Apps</a></li>
@@ -34,10 +44,13 @@
             </ul>
         </nav>
     </header>
+    <!-- /partial:header -->
 
-    <main>
-        <section id="privacy-policy">
-            <div class="container privacy-content">
+    <main id="main">
+        <section id="privacy-policy" class="legal">
+            <div class="container legal-layout">
+                <nav class="legal-toc" aria-label="On this page" hidden></nav>
+                <article class="privacy-content">
                 <div class="breadcrumb">
                     <a href="dungeon-soundboard.html">← Back to Dungeon Soundboard</a>
                 </div>
@@ -178,18 +191,45 @@
                         <li><strong>Email:</strong> matt@groovelogic.io</li>
                     </ul>
                 </div>
+                </article>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
+    <!-- partial:footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <img src="img/logo-wordmark.webp" alt="Groove Logic home" width="113" height="36" loading="lazy">
+                </a>
+                <p>Simple, useful apps.</p>
+                <a href="mailto:matt@groovelogic.io" class="footer-email">matt@groovelogic.io</a>
             </div>
+            <nav class="footer-col" aria-label="Apps">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard.html">Dungeon Soundboard</a></li>
+                    <li><a href="jsonify-playlist.html">Jsonify Playlist</a></li>
+                    <li><a href="dj-bpm-assistant.html">DJ BPM Assistant</a></li>
+                    <li><a href="wakemate.html">WakeMate</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard-privacy.html">Dungeon Soundboard Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-privacy.html">DJ BPM Assistant Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-terms.html">DJ BPM Assistant Terms</a></li>
+                    <li><a href="wakemate-privacy.html">WakeMate Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- /partial:footer -->
 
     <script src="js/script.js"></script>
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jsonify Playlist - Groove Logic</title>
     <meta name="description" content="Jsonify Playlist: convert any Spotify playlist into a clean, portable JSON file in one click.">
-    <meta name="theme-color" content="#000000">
+    <meta name="theme-color" content="#07040d">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Groove Logic">
     <meta property="og:title" content="Jsonify Playlist - Groove Logic">
@@ -16,17 +16,27 @@
     <link rel="canonical" href="https://groovelogic.io/jsonify-playlist.html">
     <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    
+
+    <script>document.documentElement.classList.add('js');</script>
+    <link rel="preload" href="fonts/inter-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/unbounded-latin-var.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-nav="apps" style="--accent: var(--accent-jsonify-playlist)">
 
-    <header>
-        <nav>
-            <a href="index.html">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- partial:header -->
+    <header class="site-header">
+        <nav class="site-nav" aria-label="Main">
+            <a href="index.html" class="brand">
                 <img src="img/logo-wordmark.webp" alt="Groove Logic home" class="header-logo-image" width="113" height="36">
             </a>
-            <ul>
+            <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">
+                <span class="visually-hidden">Menu</span>
+                <span class="nav-toggle-bars" aria-hidden="true"></span>
+            </button>
+            <ul id="nav-menu" class="nav-menu">
                 <li><a href="index.html#hero">Home</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#apps">Apps</a></li>
@@ -34,75 +44,148 @@
             </ul>
         </nav>
     </header>
+    <!-- /partial:header -->
 
-    <main>
-        <section id="app-detail">
-            <div class="container">
-                <div class="app-detail-header">
-                    <img src="img/jsonify-playlist-logo.webp" alt="Jsonify Playlist App Icon" class="app-detail-icon">
-                    <div class="app-title-group">
-                        <h1>Jsonify Playlist</h1>
-                        <p>Extract Spotify playlist metadata directly into a perfectly formatted JSON array.</p>
-                        <a href="https://jsonify-playlist.com" target="_blank" rel="noopener noreferrer" class="app-store-button">Open Web App</a>
+    <main id="main">
+        <section class="app-hero">
+            <div class="app-hero-bg" aria-hidden="true"></div>
+            <div class="container app-hero-grid">
+                <div class="app-hero-copy">
+                    <a href="index.html#apps" class="back-link">&larr; All apps</a>
+                    <img src="img/jsonify-playlist-logo.webp" alt="Jsonify Playlist App Icon" class="app-detail-icon" width="640" height="640" style="view-transition-name: icon-jsonify-playlist">
+                    <h1>Jsonify Playlist</h1>
+                    <p class="app-tagline">Extract Spotify playlist metadata directly into a perfectly formatted JSON array.</p>
+                    <div class="app-actions">
+                            <a href="https://jsonify-playlist.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Web App</a>
                     </div>
                 </div>
-
-                <div class="app-detail-body">
-                    <h2>Description</h2>
-                    <p>Jsonify Playlist gives you total control over your music data. Use your Spotify account to instantly access your personal library, or paste the URL of any public playlist. With one click, the tool extracts all the essential track metadata—including song titles, artists, and track length—and packages it into a perfectly formatted JSON array. You can then download the file directly or copy the code to your clipboard for use in your own local files, web apps, or data backups.</p>
-
-                    <h2>Key Features</h2>
-                    <ul class="features-list">
-                        <li><strong>One-Click Metadata Extraction:</strong> Instantly extract song titles, artists, and exact second-counts from any Spotify playlist.</li>
-                        <li><strong>Personal Library or Public Link:</strong> Use your Spotify account for direct access, or simply paste a public playlist URL.</li>
-                        <li><strong>Clean JSON Formatting:</strong> Generates a simplified, perfectly formatted JSON array of your tracklist, perfect for developers and DJs.</li>
-                        <li><strong>Easy Export:</strong> Download the file directly or copy-paste the data straight to your clipboard for immediate use.</li>
-                    </ul>
-
-                    <h2>Tech Stack</h2>
-                    <ul class="features-list">
-                        <li><strong>Frontend:</strong> Next.js 15 (App Router), TypeScript, and Tailwind CSS.</li>
-                        <li><strong>Backend & Auth:</strong> NextAuth.js for seamless Spotify OAuth, backed by Firebase for data storage and tracking.</li>
-                        <li><strong>Integrations:</strong> Spotify Web API (metadata), Google Drive API (direct cloud exports), and Polar.sh (subscription & payment processing).</li>
-                    </ul>
+                <div class="app-hero-visual" aria-hidden="true">
+                        <div class="hero-icon-art">
+                            <img src="img/jsonify-playlist-logo.webp" alt="" width="640" height="640">
+                        </div>
                 </div>
             </div>
         </section>
 
-        <section id="feedback">
+        <section id="app-detail" class="section">
             <div class="container">
-                <h2 class="section-title">Feedback & Feature Requests</h2>
-                <p class="contact-subtitle">Want to request a feature or provide feedback? Contact us!</p>
-                <form id="feedback-form" data-app="Jsonify Playlist" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form">
-                    <div class="form-group">
-                        <select name="type" required>
+                <div class="app-overview reveal">
+                    <h2>Description</h2>
+                    <p>Jsonify Playlist gives you total control over your music data. Use your Spotify account to instantly access your personal library, or paste the URL of any public playlist. With one click, the tool extracts all the essential track metadata—including song titles, artists, and track length—and packages it into a perfectly formatted JSON array. You can then download the file directly or copy the code to your clipboard for use in your own local files, web apps, or data backups.</p>
+                </div>
+                <h2 class="block-title reveal">Key Features</h2>
+                <ul class="feature-grid">
+                    <li class="feature-card reveal">
+                        <span class="feature-index">01</span>
+                        <h3>One-Click Metadata Extraction</h3>
+                        <p>Instantly extract song titles, artists, and exact second-counts from any Spotify playlist.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">02</span>
+                        <h3>Personal Library or Public Link</h3>
+                        <p>Use your Spotify account for direct access, or simply paste a public playlist URL.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">03</span>
+                        <h3>Clean JSON Formatting</h3>
+                        <p>Generates a simplified, perfectly formatted JSON array of your tracklist, perfect for developers and DJs.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">04</span>
+                        <h3>Easy Export</h3>
+                        <p>Download the file directly or copy-paste the data straight to your clipboard for immediate use.</p>
+                    </li>
+                </ul>
+                <h2 class="block-title reveal">Tech Stack</h2>
+                <ul class="feature-grid feature-grid-compact">
+                    <li class="feature-card reveal">
+                        <span class="feature-index">01</span>
+                        <h3>Frontend</h3>
+                        <p>Next.js 15 (App Router), TypeScript, and Tailwind CSS.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">02</span>
+                        <h3>Backend & Auth</h3>
+                        <p>NextAuth.js for seamless Spotify OAuth, backed by Firebase for data storage and tracking.</p>
+                    </li>
+                    <li class="feature-card reveal">
+                        <span class="feature-index">03</span>
+                        <h3>Integrations</h3>
+                        <p>Spotify Web API (metadata), Google Drive API (direct cloud exports), and Polar.sh (subscription & payment processing).</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="feedback" class="section section-alt">
+            <div class="container narrow">
+                <header class="section-head reveal">
+                    <h2 class="section-title">Feedback &amp; Feature Requests</h2>
+                    <p class="section-lede">Want to request a feature or provide feedback? Contact us!</p>
+                </header>
+                <form id="feedback-form" data-app="Jsonify Playlist" action="https://formspree.io/f/xpwjojyr" method="POST" class="contact-form reveal">
+                    <div class="field field-select">
+                        <select id="fb-type" name="type" required>
                             <option value="" disabled selected>Select a message type...</option>
                             <option value="Feature Request">Feature Request</option>
                             <option value="Feedback">Feedback</option>
                             <option value="Assistance">Assistance</option>
                             <option value="Other">Other</option>
                         </select>
+                        <label for="fb-type">Message type</label>
                     </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
+                    <div class="field">
+                        <input id="fb-email" type="email" name="email" placeholder=" " required autocomplete="email">
+                        <label for="fb-email">Your Email</label>
                     </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                    <div class="field">
+                        <textarea id="fb-message" name="message" rows="5" placeholder=" " required></textarea>
+                        <label for="fb-message">Your Message</label>
                     </div>
-                    <button type="submit" class="submit-button">Send Message</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send Message</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="mailto:matt@groovelogic.io">matt@groovelogic.io</a>
+    <!-- partial:footer -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="brand">
+                    <img src="img/logo-wordmark.webp" alt="Groove Logic home" width="113" height="36" loading="lazy">
+                </a>
+                <p>Simple, useful apps.</p>
+                <a href="mailto:matt@groovelogic.io" class="footer-email">matt@groovelogic.io</a>
             </div>
+            <nav class="footer-col" aria-label="Apps">
+                <h2>Apps</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard.html">Dungeon Soundboard</a></li>
+                    <li><a href="jsonify-playlist.html">Jsonify Playlist</a></li>
+                    <li><a href="dj-bpm-assistant.html">DJ BPM Assistant</a></li>
+                    <li><a href="wakemate.html">WakeMate</a></li>
+                </ul>
+            </nav>
+            <nav class="footer-col" aria-label="Legal">
+                <h2>Legal</h2>
+                <ul>
+                    <li><a href="dungeon-soundboard-privacy.html">Dungeon Soundboard Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-privacy.html">DJ BPM Assistant Privacy</a></li>
+                    <li><a href="dj-bpm-assistant-terms.html">DJ BPM Assistant Terms</a></li>
+                    <li><a href="wakemate-privacy.html">WakeMate Privacy</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; <span class="current-year">2026</span> Groove Logic. All Rights Reserved.</p>
         </div>
     </footer>
+    <!-- /partial:footer -->
+
+    <div class="mobile-cta" aria-hidden="true">
+        <a href="https://jsonify-playlist.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-block" tabindex="-1">Open Web App</a>
+    </div>
 
     <script src="js/script.js"></script>
     <script src="js/forms.js"></script>
