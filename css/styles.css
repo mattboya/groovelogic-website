@@ -31,6 +31,9 @@
 
 /* --- Design Tokens --- */
 :root {
+    /* The site is dark-only: native controls and scrollbars should match */
+    color-scheme: dark;
+
     /* Night palette */
     --color-bg: #07040d;
     --color-surface: #0f0a1a;
